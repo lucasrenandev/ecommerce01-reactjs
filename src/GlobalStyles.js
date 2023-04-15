@@ -24,6 +24,10 @@ export const GlobalStyles = createGlobalStyle`
     section {
         padding: 90px 14%;
         width: 100%;
+
+        @media screen and (max-width: 1359px) {
+            padding: 90px 2%;
+        }
     }
 
     img, a {

@@ -11,6 +11,10 @@ export const H2 = styled.h2`
     font-weight: 700;
     line-height: 1;
     text-transform: capitalize;
+
+    @media screen and (max-width: 400px) {
+        line-height: 1.2;
+    }
 `
 export const FeaturedContent = styled.main`
     display: grid;
@@ -18,6 +22,10 @@ export const FeaturedContent = styled.main`
     align-items: center;
     gap: 1rem;
     margin-top: 5rem;
+
+    @media screen and (max-width: 400px) {
+        grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    }
 `
 export const FeaturedBox = styled.div`
     position: relative;

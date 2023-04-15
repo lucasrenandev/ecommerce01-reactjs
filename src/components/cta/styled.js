@@ -4,6 +4,7 @@ export const Cta = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     align-items: center;
+    text-align: center;
 `
 export const CtaBox = styled.aside`
     opacity: 0.5;

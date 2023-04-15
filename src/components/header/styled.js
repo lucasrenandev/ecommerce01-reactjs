@@ -16,8 +16,16 @@ export const Header = styled.header`
 
     &.sticky {
         background-color: #fff;
-        padding: 14px 14%;
+        padding: 12px 14%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        @media screen and (max-width: 1359px) {
+            padding: 12px 2%;
+        }
+    }
+
+    @media screen and (max-width: 1359px) {
+        padding: 10px 2%;
     }
 `
 export const Logo = styled.a`
@@ -27,15 +35,38 @@ export const Logo = styled.a`
     letter-spacing: 1px;
 `
 export const NavBar = styled.nav`
+    @media screen and (max-width: 750px) {
+        position: absolute;
+        top: 100%;
+        left: -500px;
+        background-color: #fff;
+        width: 50vw;
+        height: 100vh;
+        transition: all 0.4s ease;
 
+        &.active {
+            left: 0;
+        }
+    }
 `
 export const NavList = styled.ul`
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 export const List = styled.li`
     padding: 0 25px;
     margin: 0 5px;
+
+    @media screen and (max-width: 750px) {
+        padding: 0;
+        margin: 2rem 0;
+    }
 `
 export const NavLink = styled.a`
     color: #000;
@@ -60,4 +91,9 @@ export const MenuIcon = styled.div`
     z-index: 1001;
     cursor: pointer;
     display: none;
+
+    @media screen and (max-width: 750px) {
+        display: inline-flex;
+        align-items: center;
+    }
 `

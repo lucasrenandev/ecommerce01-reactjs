@@ -7,6 +7,10 @@ export const Sale = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     align-items: center;
+
+    @media screen and (max-width: 1359px) {
+        grid-template-columns: 1fr;
+    }
 `
 export const SaleText = styled.aside`
     
@@ -24,4 +28,9 @@ export const H2 = styled.h2`
     text-transform: capitalize;
     line-height: 1.4;
     letter-spacing: 0.5rem;
+
+    @media screen and (max-width: 400px) {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
 `

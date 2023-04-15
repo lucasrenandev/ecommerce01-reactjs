@@ -7,6 +7,11 @@ export const Home = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     align-items: center;
+
+    @media screen and (max-width: 1359px) {
+        grid-template-columns: 1fr;
+        height: 85vh;
+    }
 `
 export const HomeText = styled.main`
 
@@ -16,6 +21,11 @@ export const H1 = styled.h1`
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.6rem;
+
+    @media screen and (max-width: 400px) {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
 `
 export const H3 = styled.h3`
     font-size: 1rem;

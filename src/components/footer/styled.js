@@ -10,4 +10,5 @@ export const CopyRight = styled.p`
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
+    line-height: 1.8;
 `

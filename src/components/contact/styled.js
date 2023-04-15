@@ -2,23 +2,21 @@ import styled from "styled-components";
 
 export const Contact = styled.section`
     background-color: #111;
-`
-export const ContactContent = styled.main`
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-   align-items: flex-start;
-   gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: flex-start;
+    gap: 2rem;
 `
 export const ContactBox = styled.div`
-
+    
 `
 export const H5 = styled.h5`
     color: #fff;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 2rem;
-    `
+    margin-bottom: 2rem; 
+`
 export const H6 = styled.h6`
     font-size: 1rem;
     font-weight: 600;
