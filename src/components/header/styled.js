@@ -63,19 +63,20 @@ export const List = styled.li`
     padding: 0 25px;
     margin: 0 5px;
 
+    .nav-link {
+        color: #000;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: var(--btn-color);
+        }
+    }
+
     @media screen and (max-width: 750px) {
         padding: 0;
         margin: 2rem 0;
-    }
-`
-export const NavLink = styled.a`
-    color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.4s ease;
-
-    &:hover {
-        color: var(--btn-color);
     }
 `
 export const Icons = styled.div`
@@ -85,6 +86,12 @@ export const Icons = styled.div`
 `
 export const Icon = styled.i`
     font-size: 34px;
+    color: #000;
+    transition: all 0.4s ease;
+
+    &:hover {
+        color: var(--btn-color);
+    }
 `
 export const MenuIcon = styled.div`
     font-size: 33px;

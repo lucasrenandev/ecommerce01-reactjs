@@ -26,12 +26,12 @@ export default function scrollarrow() {
     useEffect(hidleScrollUp)
 
     return(
-        <div className="arrow">
+        <>
             {scrollArrow && (
                 <ScrollArrow onClick={scrollUp}>
                     <FaArrowUp/>
                 </ScrollArrow>
             )}
-        </div>
+        </>
     )
 }

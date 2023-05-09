@@ -1,5 +1,5 @@
 import { Header, Logo, NavBar, NavList,
-List, NavLink, Icons, Icon, MenuIcon } from "./styled";
+List, Icons, Icon, MenuIcon } from "./styled";
 import { HashLink as Link } from "react-router-hash-link";
 import { BiMenu } from "react-icons/bi"
 import { IoClose } from "react-icons/io5"
@@ -7,7 +7,7 @@ import { BiShoppingBag } from "react-icons/bi"
 import { useEffect, useRef, useState } from "react";
 
 export default function header() {
-    const [menuIcon, setMenuIcon] = useState(BiMenu)
+    const [menuIcon, setMenuIcon] = useState(<BiMenu/>)
     const headingRef = useRef(null)
     const navRef = useRef(null)
 
@@ -20,18 +20,18 @@ export default function header() {
     const toggleMenu = () => {
         if(navRef.current.classList.contains("active")) {
             navRef.current.classList.remove("active")
-            setMenuIcon(BiMenu)
+            setMenuIcon(<BiMenu/>)
         }
         else {
             navRef.current.classList.add("active")
-            setMenuIcon(IoClose)
+            setMenuIcon(<IoClose/>)
         }
     }
 
     const hidleMenu = () => {
         window.addEventListener("scroll", () => {
             navRef.current.classList.remove("active")
-            setMenuIcon(BiMenu)
+            setMenuIcon(<BiMenu/>)
         })
     }
 
@@ -44,15 +44,15 @@ export default function header() {
 
             <NavBar ref={navRef} onScroll={hidleMenu}>
                 <NavList>
-                    <List><Link smooth to={'#home'}><NavLink>Home</NavLink></Link></List>
-                    <List><Link smooth to={'#fet'}><NavLink>Featured</NavLink></Link></List>
-                    <List><Link smooth to={'#new'}><NavLink>New</NavLink></Link></List>
-                    <List><Link smooth to={'#contact'}><NavLink>Contact</NavLink></Link></List>
+                    <List><Link className="nav-link" smooth to={'#home'}>Home</Link></List>
+                    <List><Link className="nav-link" smooth to={'#fet'}>Featured</Link></List>
+                    <List><Link className="nav-link" smooth to={'#new'}>New</Link></List>
+                    <List><Link className="nav-link" smooth to={'#contact'}>Contact</Link></List>
                 </NavList>
             </NavBar>
 
             <Icons>
-                <NavLink href="#"><Icon><BiShoppingBag/></Icon></NavLink>
+                <Link href="#"><Icon><BiShoppingBag/></Icon></Link>
                 <MenuIcon onClick={toggleMenu}>{menuIcon}</MenuIcon>
             </Icons>
         </Header>
